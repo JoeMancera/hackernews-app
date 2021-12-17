@@ -4,15 +4,17 @@ import Header from "components/Header";
 import Home from "pages/Home";
 import Favorites from "pages/Favorites";
 import "./App.css";
+import OptionPage from "components/OptionPage";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
-      <section className="container">
-        <div>Here check</div>
+      <section className="container app-result">
+        <OptionPage />
         <Route path="/" component={Home} />
         <Route path="/favorites" component={Favorites} />
+        <Route path="/404" component={() => <h1>404 Error</h1>} />
       </section>
     </div>
   );
