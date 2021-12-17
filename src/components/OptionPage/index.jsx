@@ -6,7 +6,7 @@ export default function OptionPage() {
   const [location, setLocation] = useLocation();
 
   return (
-    <div className="pages">
+    <nav className="pages">
       <Link
         className={location === "/" ? "page-item active" : "page-item"}
         to="/"
@@ -19,6 +19,6 @@ export default function OptionPage() {
       >
         My faves
       </Link>
-    </div>
+    </nav>
   );
 }

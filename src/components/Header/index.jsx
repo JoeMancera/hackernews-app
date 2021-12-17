@@ -4,9 +4,9 @@ import "./Header.css";
 export default function Header() {
   return (
     <header className="header">
-      <nav className="container">
+      <div className="container">
         <h1>Hacker news</h1>
-      </nav>
+      </div>
     </header>
   );
 }
