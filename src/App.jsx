@@ -1,5 +1,6 @@
 import React from "react";
-import { Route, Link } from "wouter";
+import { Route } from "wouter";
+import Header from "components/Header";
 import Home from "pages/Home";
 import Favorites from "pages/Favorites";
 import "./App.css";
@@ -7,9 +8,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hacker news</h1>
-      </header>
+      <Header />
       <div>Here check</div>
       <Route path="/" component={Home} />
       <Route path="/favorites" component={Favorites} />
