@@ -4,11 +4,11 @@
   box-shadow: 0 1px 4px 0 rgba(0, 21, 41, 0.12);
   display: flex;
   height: 114px;
-  min-width: 100vw;
 }
 
-.App-header nav{
-  min-width: 100%;
+.App-header nav {
+  align-self: center;
+  justify-self: flex-start;
 }
 
 .App-header h1 {

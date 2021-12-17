@@ -9,9 +9,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div>Here check</div>
-      <Route path="/" component={Home} />
-      <Route path="/favorites" component={Favorites} />
+      <section className="container">
+        <div>Here check</div>
+        <Route path="/" component={Home} />
+        <Route path="/favorites" component={Favorites} />
+      </section>
     </div>
   );
 }
