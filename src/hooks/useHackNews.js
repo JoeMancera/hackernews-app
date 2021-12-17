@@ -9,7 +9,7 @@ const INITIAL_PAGE = 0;
  */
 export function useHackNews({ keyword } = { keyword : null}) {
   const [newsList, setNews] = useState([]);
-  const keywordToUse = keyword || localStorage.getItem('hna-lastFilter') || 'react,angular,vue';
+  const keywordToUse = keyword || localStorage.getItem('hna-lastFilter') || 'reactjs,angular,vuejs';
 
   const [page, setPage] = useState(INITIAL_PAGE);
   const [loading, setLoading] = useState(false);

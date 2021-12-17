@@ -20,7 +20,7 @@
 
 .page-item:hover {
   background-color: var(--color-active);
-  color: var(--color-withe);
+  color: var(--color-white);
 }
 .active{
   border: solid 1px var(--color-active);

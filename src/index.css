@@ -1,6 +1,6 @@
 :root{
   /*------ Colors ------*/
-  --color-withe:#fcfcfc;
+  --color-white:#fcfcfc;
   --color-border: #d6d6d6;
   --color-grey:#6b6b6b;
   --color-black:#3b3b3b;
@@ -20,7 +20,7 @@
 body {
   font: var(--font-body);
   letter-spacing: var(--font-letter-spacing);
-  background-color: var(--color-withe);
+  background-color: var(--color-white);
   color: var(--color-gray);
 }
 
