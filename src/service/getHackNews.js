@@ -1,11 +1,14 @@
 import { API_URL } from './settings'
+import getCreatedTime from './getCreateTime' 
 
 const fromApiResponseToNews = (apiResponse) => {
   const {hits = []} = apiResponse
   if (Array.isArray(hits)){
     const news = hits.map(newsItem => {
       const {author, created_at, story_title, story_url, story_id} = newsItem
-      return {author, created_at, story_title, story_url, story_id}
+      const difDate = getCreatedTime({ created_at })
+
+      return {author, created_at, difDate, story_title, story_url, story_id}
     })
     return news
   }

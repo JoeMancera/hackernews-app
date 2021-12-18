@@ -14,7 +14,7 @@ export default function CardNews({ newsInfo }) {
       >
         <span className="card-author">
           <img className="icon-date" src={timeIcon} alt="Date:" />
-          {newsInfo.created_at} by {newsInfo.author}
+          {newsInfo.difDate} by {newsInfo.author}
         </span>
         <h4 className="card-title">{newsInfo.story_title}</h4>
       </a>
