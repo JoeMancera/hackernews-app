@@ -1,14 +1,6 @@
 import React from "react";
-import { useHackNews } from "hooks/useHackNews";
-import CardNews from "components/CardNews";
+import NewsList from "components/NewsList";
 
 export default function Home() {
-  const { newsList } = useHackNews({ keyword: "reactjs" });
-  return (
-    <div className="list-news">
-      {newsList.map((news) => (
-        <CardNews newsInfo={news} key={`${news.story_id}-${news.created_at}`} />
-      ))}
-    </div>
-  );
+  return <NewsList />;
 }

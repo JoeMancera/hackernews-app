@@ -7,7 +7,6 @@ const fromApiResponseToNews = (apiResponse) => {
     const news = hits.map(newsItem => {
       const {author, created_at, story_title, story_url, story_id} = newsItem
       const difDate = getCreatedTime({ created_at })
-
       return {author, created_at, difDate, story_title, story_url, story_id}
     })
     return news

@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {Date} created_at 
+ * @returns string Description with the time difference
+ */
 export default function getCreatedTime({ created_at }){
   const now = new Date()
   const createdDate = new Date(created_at);

@@ -3,7 +3,7 @@ import favoriteActiveIcon from "assets/icons/favorite-active.svg";
 import timeIcon from "assets/icons/time-icon.svg";
 import "./CardNews.css";
 
-export default function CardNews({ newsInfo }) {
+function CardNews({ newsInfo }) {
   return (
     <div className="card">
       <a
@@ -24,3 +24,5 @@ export default function CardNews({ newsInfo }) {
     </div>
   );
 }
+
+export default React.memo(CardNews);
