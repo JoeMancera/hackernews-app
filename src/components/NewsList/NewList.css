@@ -1,0 +1,7 @@
+.list-news {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+  gap: 40px;
+  width: 100%;
+  margin: 38px 0;
+}

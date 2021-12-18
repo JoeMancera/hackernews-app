@@ -1,6 +1,7 @@
 import React from "react";
 import { useHackNews } from "hooks/useHackNews";
 import CardNews from "components/CardNews";
+import "./NewList.css";
 
 export default function NewsList() {
   const { newsList } = useHackNews({ keyword: "reactjs" });
