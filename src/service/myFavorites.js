@@ -28,3 +28,10 @@ export function isNewsFavorite({ story_id}){
   }
   return false;
 }
+
+export function getFavorites(){
+  if(localStorage.getItem('hna-myfavorites')){
+    return JSON.parse(localStorage.getItem('hna-myfavorites'));
+  }
+  return [];
+}
