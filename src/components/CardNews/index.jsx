@@ -1,5 +1,5 @@
 import React from "react";
-import favoriteIcon from "assets/icons/favorite-inactive.svg";
+import FavoriteButton from "components/FavoriteButton";
 import timeIcon from "assets/icons/time-icon.svg";
 import "./CardNews.css";
 
@@ -18,9 +18,7 @@ function CardNews({ newsInfo }) {
         </span>
         <h4 className="card-title">{newsInfo.story_title}</h4>
       </a>
-      <button className="favorite-button">
-        <img src={favoriteIcon} alt="favorite" />
-      </button>
+      <FavoriteButton infoItem={newsInfo} />
     </div>
   );
 }

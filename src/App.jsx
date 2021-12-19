@@ -3,8 +3,8 @@ import { Route } from "wouter";
 import Header from "components/Header";
 import Home from "pages/Home";
 import Favorites from "pages/Favorites";
-import "./App.css";
 import OptionPage from "components/OptionPage";
+import "./App.css";
 
 function App() {
   return (
