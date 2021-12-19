@@ -21,7 +21,6 @@ const fromApiResponseToNews = (apiResponse) => {
  */
 export default function getHackNews({ keyword = 'reactjs,angular,vuejs', page = 0 } = {}) {
   const apiURL = `${API_URL}?query=${keyword}&page=${page}`
-  console.log("service page",page)
   return fetch(apiURL)
   .then(res => res.json())
   .then(fromApiResponseToNews)

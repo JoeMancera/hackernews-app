@@ -29,7 +29,6 @@ export function useHackNews({ keyword } = { keyword : null}) {
 
   useEffect(() => {
     setLoadingNextPage(true);
-    console.log("useEffect page and keyword",page, keywordToUse)
     if(page === INITIAL_PAGE) return 
 
     getHackNews({ keyword: keywordToUse, page })

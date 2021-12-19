@@ -3,10 +3,13 @@ import useNearScreen from "hooks/useNearScreen";
 import debounce from "just-debounce-it";
 import { useHackNews } from "hooks/useHackNews";
 import CardNews from "components/CardNews";
+import Spinner from "components/Spinner";
 import "./NewList.css";
 
 export default function NewsList() {
-  const { newsList, setPage } = useHackNews({ keyword: "reactjs" });
+  const { newsList, setPage, loading, loadingNextPage } = useHackNews({
+    keyword: "reactjs",
+  });
   const { isNearFinalElement, finalPageDivRef } = useNearScreen({
     firstTime: false,
   });
@@ -17,15 +20,22 @@ export default function NewsList() {
   );
 
   useEffect(() => {
-    console.log("isNearScreen", isNearFinalElement);
     if (isNearFinalElement) debounceHandleNextPage();
   }, [isNearFinalElement, debounceHandleNextPage]);
 
   return (
     <div className="list-news">
-      {newsList.map((news) => (
-        <CardNews newsInfo={news} key={`${news.story_id}-${news.created_at}`} />
-      ))}
+      {loading ? (
+        <Spinner />
+      ) : (
+        newsList.map((news) => (
+          <CardNews
+            newsInfo={news}
+            key={`${news.story_id}-${news.created_at}`}
+          />
+        ))
+      )}
+      {loadingNextPage && <Spinner />}
       <div id="finalPageDivRef" ref={finalPageDivRef}></div>
     </div>
   );
