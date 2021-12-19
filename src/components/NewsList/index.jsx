@@ -6,17 +6,20 @@ import CardNews from "components/CardNews";
 import "./NewList.css";
 
 export default function NewsList() {
-  const { newsList } = useHackNews({ keyword: "reactjs" });
-  const { isNearScreen, finalPageDivRef } = useNearScreen({ firstTime: false });
+  const { newsList, setPage } = useHackNews({ keyword: "reactjs" });
+  const { isNearFinalElement, finalPageDivRef } = useNearScreen({
+    firstTime: false,
+  });
 
   const debounceHandleNextPage = useCallback(
-    debounce(() => console.log("Next page", isNearScreen), 500),
-    [isNearScreen]
+    debounce(() => setPage((previousPage) => previousPage + 1), 500),
+    [setPage]
   );
 
   useEffect(() => {
-    if (isNearScreen) debounceHandleNextPage();
-  }, [isNearScreen, debounceHandleNextPage]);
+    console.log("isNearScreen", isNearFinalElement);
+    if (isNearFinalElement) debounceHandleNextPage();
+  }, [isNearFinalElement, debounceHandleNextPage]);
 
   return (
     <div className="list-news">

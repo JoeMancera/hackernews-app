@@ -14,7 +14,7 @@ export function useHackNews({ keyword } = { keyword : null}) {
   const [page, setPage] = useState(INITIAL_PAGE);
   const [loading, setLoading] = useState(false);
   const [loadingNextPage, setLoadingNextPage] = useState(false);
-  
+
   useEffect(() => {
     setLoading(true);
 
@@ -29,10 +29,10 @@ export function useHackNews({ keyword } = { keyword : null}) {
 
   useEffect(() => {
     setLoadingNextPage(true);
-
+    console.log("useEffect page and keyword",page, keywordToUse)
     if(page === INITIAL_PAGE) return 
 
-    setNews({ keyword: keywordToUse, page })
+    getHackNews({ keyword: keywordToUse, page })
     .then((nextNewsList) => {
       setNews(prevNewsList => prevNewsList.concat(nextNewsList));
       setLoadingNextPage(false);

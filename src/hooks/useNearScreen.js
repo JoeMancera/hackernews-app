@@ -10,7 +10,6 @@ export default function useNearScreen({ distance = "100px", firstTime = true} = 
   const [isNearFinalElement, setIsNearFinalElement] = useState(false);
 
   useEffect(() => {
-    console.log("useNearScreen.js: useEffect()", isNearFinalElement, firstTime, distance);
     const onChange = (entries, observer) => {
       const element = entries[0];
       if (element.isIntersecting) {
