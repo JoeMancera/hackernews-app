@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { getFavorites } from "service/myFavorites";
+import NewsList from "components/NewsList";
 
-export default function Home() {
+export default function Favorites() {
+  const [favorites, setFavorites] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setFavorites(getFavorites());
+    setLoading(false);
+  }, []);
+
   return (
     <>
-      <h1>My favorite Hacker news list</h1>
+      <NewsList
+        newsList={favorites}
+        loading={loading}
+        loadingNextPage={loading}
+      />
     </>
   );
 }
