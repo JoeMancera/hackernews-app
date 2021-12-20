@@ -9,12 +9,9 @@ export default function NewsList({ newsList, loading, loadingNextPage }) {
       {loading ? (
         <Spinner />
       ) : (
-        newsList.map((news) => (
-          <CardNews
-            newsInfo={news}
-            key={`${news.story_id}-${news.created_at}`}
-          />
-        ))
+        newsList.map(
+          (news) => news && <CardNews newsInfo={news} key={news.story_id} />
+        )
       )}
       {loadingNextPage && <Spinner />}
     </div>

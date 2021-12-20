@@ -6,9 +6,20 @@ const fromApiResponseToNews = (apiResponse) => {
   if (Array.isArray(hits)){
     const news = hits.map(newsItem => {
       const {author, created_at, story_title, story_url, story_id} = newsItem
-      const difDate = getCreatedTime({ created_at })
-      return {author, created_at, difDate, story_title, story_url, story_id}
+      if(
+        author && 
+        created_at && 
+        story_title && 
+        story_url && 
+        story_id
+      ){
+        const difDate = getCreatedTime({ created_at })
+        return {author, created_at, difDate, story_title, story_url, story_id}
+      } else {
+        return null
+      }
     })
+    console.log('original news', news)
     return news
   }
   return []
