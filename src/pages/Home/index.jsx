@@ -3,6 +3,7 @@ import NewsList from "components/NewsList";
 import useNearScreen from "hooks/useNearScreen";
 import debounce from "just-debounce-it";
 import { useHackNews } from "hooks/useHackNews";
+import TopicSelection from "components/TopicSelection";
 
 export default function Home() {
   const { newsList, setPage, loading, loadingNextPage } = useHackNews({
@@ -23,6 +24,7 @@ export default function Home() {
 
   return (
     <>
+      <TopicSelection />
       <NewsList
         newsList={newsList}
         loading={loading}

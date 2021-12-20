@@ -3,10 +3,12 @@
   border-radius: 6px;
   border: solid 1px #979797;
   display: flex;
-  height: 90px;
+  min-height: 90px;
+  max-width: 550px;
   justify-content: space-between;
   opacity: 0.8;
-  padding: 0 0 0 26px;
+  padding-left: 26px;
+  margin: 0 18px;
 }
 
 .card:hover {

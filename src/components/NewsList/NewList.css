@@ -4,4 +4,11 @@
   grid-gap: 40px;
   width: 100%;
   margin: 38px 0 3em 0;
+  
+}
+
+@media screen and (max-width: 840px) {
+  .list-news {
+    width: unset;
+  }
 }
