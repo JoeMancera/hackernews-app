@@ -1,6 +1,6 @@
 # 📃&nbsp;Hacker News App
 
-![App image](https://raw.githubusercontent.com/JoeMancera/hackernews-app/main/src/assets/design-for-repo.png)
+![App image](https://raw.githubusercontent.com/JoeMancera/hackernews-app/develope/src/assets/img/design-for-repo.png)
 
 > App to show a list The recent Hacker News posts about React, Angular and Vue. 
 > The user can filter for a specific topic and save the post to favorites list.
