@@ -27,7 +27,6 @@ export function useHackNews() {
 
     getHackNews({ keyword: keywordToUse })
     .then((news) => {
-      console.log('first page',removeDuplicate(news))
       setNews(removeDuplicate(news));
       setLoading(false);
       localStorage.setItem('hna-lastFilter', keywordToUse);
@@ -41,7 +40,6 @@ export function useHackNews() {
 
     getHackNews({ keyword: keywordToUse, page })
     .then((nextNewsList) => {
-      console.log('next page',removeDuplicate(nextNewsList))
       setNews(prevNewsList => prevNewsList.concat(removeDuplicate(nextNewsList)));
       setLoadingNextPage(false);
     })

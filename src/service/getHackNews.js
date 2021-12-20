@@ -19,7 +19,6 @@ const fromApiResponseToNews = (apiResponse) => {
         return null
       }
     })
-    console.log('original news', news)
     return news
   }
   return []
