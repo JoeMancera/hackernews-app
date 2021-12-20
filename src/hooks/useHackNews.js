@@ -4,12 +4,12 @@ import getHackNews from 'service/getHackNews';
 const INITIAL_PAGE = 0;
 /**
  * Custom Hook to get news from getHackNews service
- * @param {string} keyword Keyword to search
  * @returns {Array} News list
  */
-export function useHackNews({ keyword } = { keyword : null}) {
+export function useHackNews() {
+  const keyword = localStorage.getItem("hna-lastFilter") !== null ? localStorage.getItem("hna-lastFilter") : "reactjs,angular,vuejs"; 
   const [newsList, setNews] = useState([]);
-  const keywordToUse = keyword || localStorage.getItem('hna-lastFilter') || 'reactjs,angular,vuejs';
+  const [keywordToUse, setKeyword] = useState(keyword);
 
   const [page, setPage] = useState(INITIAL_PAGE);
   const [loading, setLoading] = useState(false);
@@ -22,10 +22,10 @@ export function useHackNews({ keyword } = { keyword : null}) {
     .then((news) => {
       setNews(news);
       setLoading(false);
-      localStorage.setItem('hna-lastFilter', keyword);
+      localStorage.setItem('hna-lastFilter', keywordToUse);
     });
 
-  }, [keyword, keywordToUse, setNews]);
+  }, [keywordToUse, setNews]);
 
   useEffect(() => {
     setLoadingNextPage(true);
@@ -38,6 +38,6 @@ export function useHackNews({ keyword } = { keyword : null}) {
     })
 
   }, [keywordToUse, page, setNews])
-  return { newsList, setPage, loading, loadingNextPage };
+  return {setKeyword, newsList, setPage, loading, loadingNextPage };
 
 }

@@ -6,9 +6,8 @@ import { useHackNews } from "hooks/useHackNews";
 import TopicSelection from "components/TopicSelection";
 
 export default function Home() {
-  const { newsList, setPage, loading, loadingNextPage } = useHackNews({
-    keyword: "reactjs",
-  });
+  const { setKeyword, newsList, setPage, loading, loadingNextPage } =
+    useHackNews();
   const { isNearFinalElement, finalPageDivRef } = useNearScreen({
     firstTime: false,
   });
@@ -18,13 +17,17 @@ export default function Home() {
     [setPage]
   );
 
+  const handleChangeTopic = (event) => {
+    setKeyword(event.target.value);
+  };
+
   useEffect(() => {
     if (isNearFinalElement) debounceHandleNextPage();
   }, [isNearFinalElement, debounceHandleNextPage]);
 
   return (
     <>
-      <TopicSelection />
+      <TopicSelection onChange={handleChangeTopic} />
       <NewsList
         newsList={newsList}
         loading={loading}

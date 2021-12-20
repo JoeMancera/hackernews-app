@@ -8,7 +8,7 @@
   justify-content: space-between;
   opacity: 0.8;
   padding-left: 26px;
-  margin: 0 18px;
+  margin: 0 12px;
 }
 
 .card:hover {
@@ -19,7 +19,6 @@
   color: var(--color-black);
   margin: 14px 0;
   text-decoration: none;
-  width: 100%;
 }
 
 .card-author {
