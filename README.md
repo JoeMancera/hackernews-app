@@ -1,7 +1,11 @@
 # 📃&nbsp;Hacker News App
 
+![Drag Racing](https://raw.githubusercontent.com/JoeMancera/hackernews-app/main/src/assets/design-for-repo.png)
+
 > App to show a list The recent Hacker News posts about React, Angular and Vue. 
 > The user can filter for a specific topic and save the post to favorites list.
+
+You can view the site [here.](https://elegant-mestorf-315fe7.netlify.app/)
 
 # 🪓&nbsp;Technologies
 
