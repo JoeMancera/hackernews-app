@@ -1,0 +1,28 @@
+.page-item {
+  border-radius: 3px;
+  border: solid 1px var(--color-border);
+  color: var(--color-black);
+  height: 31px;
+  padding: 3px 12px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.page-item:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.page-item:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.page-item:hover {
+  background-color: var(--color-active);
+  color: var(--color-white);
+}
+.active{
+  border: solid 1px var(--color-active);
+}
+

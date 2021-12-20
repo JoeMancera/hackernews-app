@@ -1,0 +1,51 @@
+.card {
+  background-color: var(--color-white);
+  border-radius: 6px;
+  border: solid 1px #979797;
+  display: flex;
+  min-height: 90px;
+  max-width: 320px;
+  justify-content: space-between;
+  opacity: 0.8;
+  padding-left: 26px;
+}
+
+.card:hover {
+  opacity: 0.4;
+}
+
+.card-body {
+  color: var(--color-black);
+  margin: 14px 0;
+  text-decoration: none;
+}
+
+.card-author {
+  align-items: center;
+  display: flex;
+  font-size: 11px;
+}
+
+.icon-date {
+  margin-right: 8px;
+}
+
+.card-title {
+  margin-top: 6px;
+  font: var(--font-body)
+}
+
+@media screen and (min-width: 576px) {
+  .card {
+    min-height: 90px;
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .card {
+    min-height: 90px;
+    max-width: 550px;
+    margin: 0 12px;
+  }
+}

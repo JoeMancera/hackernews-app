@@ -1,0 +1,13 @@
+.favorite-button {
+  background-color: #60606013;
+  border-radius: 0 6px 6px 0;
+  border: solid 1px #60606013;
+  cursor: pointer;
+  min-height: 100%;
+  margin: 0 0 0 16px;
+  padding: 35px 22px 33px;
+}
+
+.favorite-button:hover {
+  background-color: #a9f5f8;
+}
