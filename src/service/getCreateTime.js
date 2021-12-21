@@ -8,7 +8,10 @@ export default function getCreatedTime({ created_at }){
   const createdDate = new Date(created_at);
   const wasCreated = (now.getTime() - createdDate.getTime()) / 1000 / 60 /60
 
-  if(wasCreated < 1 ){
+  if (isNaN(wasCreated)){
+    return 'Some time ago'
+  }
+  else if(wasCreated < 1 ){
     return 'A few minutes ago'
   }
   else if(wasCreated > 1 && wasCreated < 24){
