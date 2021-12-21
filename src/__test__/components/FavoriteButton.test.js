@@ -8,7 +8,7 @@ const newsItemMock = {
   difDate: '2021-12-20T18:21:51.000Z'
 }
 
-describe('Tests fro <FavoriteButton /> component', () => {
+describe('Tests from <FavoriteButton /> component', () => {
 
   test('Should show the alt attribute as Add to favorites', () => {
     render(<FavoriteButton infoItem={newsItemMock} />)
