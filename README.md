@@ -1,7 +1,11 @@
-# 📃&nbsp;Hacker News App
+# 📃&nbsp;Hacker News App  [![Netlify Status](https://api.netlify.com/api/v1/badges/9e77917f-b425-456c-a6bd-c764d6de7370/deploy-status)](https://app.netlify.com/sites/elegant-mestorf-315fe7/deploys)
+
+![App image](https://raw.githubusercontent.com/JoeMancera/hackernews-app/develope/src/assets/img/design-for-repo.png)
 
 > App to show a list The recent Hacker News posts about React, Angular and Vue. 
 > The user can filter for a specific topic and save the post to favorites list.
+
+You can view the site [here.](https://elegant-mestorf-315fe7.netlify.app/)
 
 # 🪓&nbsp;Technologies
 
