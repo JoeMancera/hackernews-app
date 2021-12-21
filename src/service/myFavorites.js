@@ -15,7 +15,7 @@ export function addNewsToFavorite({ favorite }){
 export function removeNewsFormFavorite({ favorite }){
   if(localStorage.getItem('hna-myfavorites')){
     const favorites = JSON.parse(localStorage.getItem('hna-myfavorites'));
-    const index = favorites.findIndex(f => f.id === favorite.id);
+    const index = favorites.findIndex(f => f.story_id === favorite.story_id);
     favorites.splice(index, 1);
     localStorage.setItem('hna-myfavorites', JSON.stringify(favorites));
   }
