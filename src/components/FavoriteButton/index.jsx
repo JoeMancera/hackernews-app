@@ -28,7 +28,7 @@ export default function FavoriteButton({ infoItem }) {
     <button className="favorite-button" onClick={handleClick}>
       <img
         src={isFavorite ? favoriteActiveIcon : favoriteIcon}
-        alt="favorite"
+        alt={isFavorite ? "Remove from favorites" : "Add to favorites"}
       />
     </button>
   );
